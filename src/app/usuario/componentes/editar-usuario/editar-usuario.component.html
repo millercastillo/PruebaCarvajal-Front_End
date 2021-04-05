@@ -1,0 +1,63 @@
+<h1 mat-dialog-title class="titulo; text-light " style="text-align: center; background-color: #5bc0de; " >EDITAR USUARIO</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon4">Nombre <span style="color: red">*</span></span>
+      </div>
+      <input id="nombre"   type="text" class="form-control" formControlName="nombre" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Apellido <span style="color: red">*</span></span>
+      </div>
+      <input id="apellido"   type="text" class="form-control" formControlName="apellido" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">TipoIdentificacion <span style="color: red">*</span></span>
+      </div>
+      <input id="idTipoIdentificacion"   type="text" class="form-control" formControlName="idTipoIdentificacion" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">NumeroIdentificacion <span style="color: red">*</span></span>
+      </div>
+      <input id="numeroIdentificacion"   type="text" class="form-control" formControlName="numeroIdentificacion" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Contraseña <span style="color: red">*</span></span>
+      </div>
+      <input id="contraseña"   type="text" class="form-control" formControlName="contraseña" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Correo <span style="color: red">*</span></span>
+      </div>
+      <input id="correo"   type="text" class="form-control" formControlName="correo" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+</div>
+<mat-dialog-actions>
+  <div class="izq">
+    <button type="button" class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+    <button stype="button" (click)="onSubmit()"  class="btn btn-primary" [disabled]="formulario.invalid">Guardar
+    </button>
+  </div>
+</mat-dialog-actions>

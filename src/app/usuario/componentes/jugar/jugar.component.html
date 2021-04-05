@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIQUI</title>
+  </head>
+  <body>
+    <div style="padding: 1cm;" >
+      <div class="col-9 card " >
+        <form [formGroup]="form" style="position: relative; left: 3cm; padding: 2cm;" action="">
+         <div class="row">
+           <input style="font-size: 2cm;"  type="button" value="0" class="col-3" id="f0c0" formControlName='f0c0' (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="1" class="col-3"id="f0c1" formControlName='f0c1'   (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="2" class="col-3"id="f0c2" formControlName='f0c2'   (click)="pintar($event)">
+         </div>
+         <div class="row">
+           <input style="font-size: 2cm;" type="button" value="3" class="col-3" id="f1c0" formControlName='f1c0'   (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="4" class="col-3" id="f1c1" formControlName='f1c1'   (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="5" class="col-3"id="f1c2" formControlName='f1c2'   (click)="pintar($event)">
+         </div>
+         <div class="row">
+           <input style="font-size: 2cm;" type="button" value="6" class="col-3" id="f2c0" formControlName='f2c0'   (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="7" class="col-3" id="f2c1" formControlName='f2c1'   (click)="pintar($event)">
+           <input style="font-size: 2cm;" type="button" value="8" class="col-3" id="f2c2" formControlName='f2c2'   (click)="pintar($event)">
+         </div>
+        </form>
+        <button class="btn btn-primary" (click)="reset()">RESET</button>
+        <button type="button" class="btn btn-danger" (click)="salir()">SALIR</button>
+       </div>
+    </div>
+  </body>
+</html>

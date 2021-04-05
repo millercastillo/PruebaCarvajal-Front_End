@@ -1,0 +1,35 @@
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+.redondeado {
+  border-radius: 5px;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.izq {
+  margin-right: 0%;
+  margin-left: auto;
+  display: inline-flex;
+  justify-self: right;
+}
+.full{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  justify-items: right;
+}
+.der{
+  margin-right: 0%;
+  margin-right: auto;
+  display: inline-flex;
+  justify-self: left;
+}
+
+
+
+

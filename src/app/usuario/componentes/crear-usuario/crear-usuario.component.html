@@ -1,0 +1,102 @@
+<h1 mat-dialog-title class="titulo " style="text-align: center; background-color: #5bc0de;">AGREGAR USUARIO</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div *ngIf="formulario.get('nombre').errors && formulario.get('nombre').touched" >
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="(formulario.get('nombre').errors?.required  && formulario.get('nombre').touched)">
+      nombre vacío. Este campo es Obligatorio
+      </i>
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="formulario.get('nombre').errors?.email">
+      Formato de nombre Incorrecto.
+      </i>
+  </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon4">Nombre <span style="color: red">*</span></span>
+      </div>
+      <input id="nombre"   type="text" class="form-control" formControlName="nombre" aria-label="Username" aria-describedby="basic-addon1" />
+
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div *ngIf="formulario.get('apellido').errors && formulario.get('apellido').touched" >
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="(formulario.get('apellido').errors?.required  && formulario.get('apellido').touched)">
+      apellido vacío. Este campo es Obligatorio
+      </i>
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="formulario.get('apellido').errors?.email">
+      Formato de apellido Incorrecto.
+      </i>
+  </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Apellido <span style="color: red">*</span></span>
+      </div>
+      <input id="apellido"   type="text" class="form-control" formControlName="apellido" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">TipoIdentificacion <span style="color: red">*</span></span>
+      </div>
+      <input id="idTipoIdentificacion"   type="text" class="form-control" formControlName="idTipoIdentificacion" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">NumeroIdentificacion <span style="color: red">*</span></span>
+      </div>
+      <input id="numeroIdentificacion"   type="text" class="form-control" formControlName="numeroIdentificacion" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div *ngIf="formulario.get('contraseña').errors && formulario.get('contraseña').touched" >
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="(formulario.get('contraseña').errors?.required  && formulario.get('contraseña').touched)">
+      contraseña vacío. Este campo es Obligatorio
+      </i>
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="formulario.get('contraseña').errors?.email">
+      Formato de contraseña Incorrecto. Debe contener al menos 5 caracteres
+      </i>
+  </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Contraseña <span style="color: red">*</span></span>
+      </div>
+      <input id="contraseña"   type="text" class="form-control" formControlName="contraseña" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div *ngIf="formulario.get('correo').errors && formulario.get('correo').touched" >
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="(formulario.get('correo').errors?.required  && formulario.get('correo').touched)">
+      Correo vacío. Este campo es Obligatorio
+      </i>
+      <i class="fa fa-exclamation-circle uncheck"
+      *ngIf="formulario.get('correo').errors?.email">
+      Formato de correo Incorrecto.
+      </i>
+  </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Correo <span style="color: red">*</span></span>
+      </div>
+      <input id="correo"   type="text" class="form-control" formControlName="correo" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </form>
+</div>
+<mat-dialog-actions>
+  <div class="izq">
+    <button type="button" class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+    <button stype="button" (click)="onSubmit()"  class="btn btn-primary" [disabled]="formulario.invalid">Guardar
+    </button>
+  </div>
+</mat-dialog-actions>
